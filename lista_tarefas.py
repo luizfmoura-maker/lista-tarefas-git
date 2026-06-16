@@ -32,6 +32,15 @@ def adicionar_tarefa(descricao):
     tarefas.append(tarefa)
     print(f'Tarefa "{descricao}" adicionada!')
 # >> FUNÇÃO 3: listar_tarefas()
+def listar_tarefas():
+    """Lista todas as tarefas com seu status."""
+    if len(tarefas) == 0:
+        print("Nenhuma tarefa cadastrada.")
+        return
+    print("\n--- Suas Tarefas ---")
+    for i, tarefa in enumerate(tarefas, 1):
+        status = "✅" if tarefa["concluida"] else "⬜"
+        print(f"{i}. {status} {tarefa['descricao']}")
 # >> FUNÇÃO 4: concluir_tarefa(numero)
 # >> FUNÇÃO 5: contar_pendentes()
 

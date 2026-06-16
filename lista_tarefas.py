@@ -26,6 +26,11 @@ def exibir_menu():
 # ------------------------------------------------------------
 
 # >> FUNÇÃO 2: adicionar_tarefa(descricao)
+def adicionar_tarefa(descricao):
+    """Adiciona uma nova tarefa à lista."""
+    tarefa = {"descricao": descricao, "concluida": False}
+    tarefas.append(tarefa)
+    print(f'Tarefa "{descricao}" adicionada!')
 # >> FUNÇÃO 3: listar_tarefas()
 # >> FUNÇÃO 4: concluir_tarefa(numero)
 # >> FUNÇÃO 5: contar_pendentes()

@@ -50,7 +50,13 @@ def concluir_tarefa(numero):
     tarefas[numero - 1]["concluida"] = True
     print(f'Tarefa {numero} marcada como concluída!')
 # >> FUNÇÃO 5: contar_pendentes()
-
+def contar_pendentes():
+    """Retorna o número de tarefas ainda pendentes."""
+    pendentes = 0
+    for tarefa in tarefas:
+        if not tarefa["concluida"]:
+            pendentes += 1
+    return pendentes
 
 # ------------------------------------------------------------
 # ÁREA DE TESTES

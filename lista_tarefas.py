@@ -42,6 +42,13 @@ def listar_tarefas():
         status = "✅" if tarefa["concluida"] else "⬜"
         print(f"{i}. {status} {tarefa['descricao']}")
 # >> FUNÇÃO 4: concluir_tarefa(numero)
+def concluir_tarefa(numero):
+    """Marca a tarefa do número informado como concluída."""
+    if numero < 1 or numero > len(tarefas):
+        print("Número de tarefa inválido.")
+        return
+    tarefas[numero - 1]["concluida"] = True
+    print(f'Tarefa {numero} marcada como concluída!')
 # >> FUNÇÃO 5: contar_pendentes()
 
 
